@@ -9,18 +9,12 @@
 :root{
   color-scheme:light dark;
   --bg:light-dark(#f6f8fb,#0b1220);
-  --surface:light-dark(#fff,#121c2d);
-  --surface2:light-dark(#eef3f8,#18253a);
   --text:light-dark(#102033,#f4f7fb);
   --muted:light-dark(#536579,#aab8c8);
-  --line:light-dark(#dbe3ec,#2a3a51);
   --accent:#0b7a75;
-  --accent2:#234b86;
 }
 
-*{
-  box-sizing:border-box
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -35,58 +29,6 @@ body{
   background:var(--bg)
 }
 
-nav{
-  position:sticky;
-  top:0;
-  z-index:10;
-  background:color-mix(in srgb,var(--bg) 88%,transparent);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--line)
-}
-
-.navin{
-  max-width:1120px;
-  margin:auto;
-  padding:16px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between
-}
-
-.brand{
-  font-weight:800;
-  letter-spacing:-.02em
-}
-
-.brand span{
-  color:var(--accent)
-}
-
-.links{
-  display:flex;
-  gap:22px
-}
-
-.links a{
-  color:var(--muted);
-  text-decoration:none;
-  font-size:14px
-}
-
-.links a:hover{
-  color:var(--text)
-}
-
-.hero{
-  max-width:1120px;
-  margin:auto;
-  padding:90px 24px 70px;
-  display:grid;
-  grid-template-columns:1.2fr .8fr;
-  gap:48px;
-  align-items:center
-}
-
 .eyebrow{
   color:var(--accent);
   font-weight:800;
@@ -95,282 +37,56 @@ nav{
   font-size:12px
 }
 
-.hero h1{
-  font-size:clamp(44px,7vw,78px);
-  line-height:.98;
-  letter-spacing:-.055em;
-  margin:14px 0 22px
-}
-
-.hero p{
-  font-size:19px;
-  color:var(--muted);
-  max-width:680px
-}
-
-.buttons{
+.construction{
+  min-height:100vh;
   display:flex;
-  gap:12px;
-  margin-top:28px;
-  flex-wrap:wrap
-}
-
-.btn{
-  border:1px solid var(--line);
-  border-radius:10px;
-  padding:12px 17px;
-  text-decoration:none;
-  color:var(--text);
-  font-weight:700
-}
-
-.btn.primary{
-  background:var(--accent);
-  color:#06231f;
-  border-color:var(--accent)
-}
-
-.orb{
-  height:360px;
-  border-radius:28px;
-  background:
-    radial-gradient(circle at 50% 45%,#55d9c9 0 5%,transparent 6%),
-    radial-gradient(circle at 25% 35%,#5577e8 0 3%,transparent 4%),
-    radial-gradient(circle at 70% 70%,#28b8a6 0 2%,transparent 3%),
-    linear-gradient(145deg,#152944,#0b1424);
-  position:relative;
-  overflow:hidden;
-  box-shadow:0 20px 60px #0003
-}
-
-.orb:before,
-.orb:after{
-  content:"";
-  position:absolute;
-  inset:12%;
-  border:1px solid #ffffff26;
-  border-radius:50%;
-  transform:rotate(28deg)
-}
-
-.orb:after{
-  inset:25%;
-  transform:rotate(-35deg);
-  border-color:#55d9c955
-}
-
-.orbtext{
-  position:absolute;
-  bottom:22px;
-  left:22px;
-  color:#fff;
-  font-size:13px;
-  letter-spacing:.08em;
-  text-transform:uppercase
-}
-
-section{
-  max-width:1120px;
-  margin:auto;
-  padding:68px 24px
-}
-
-.sectionhead{
-  display:flex;
-  justify-content:space-between;
-  gap:24px;
-  align-items:end;
-  margin-bottom:28px
-}
-
-.sectionhead h2{
-  font-size:34px;
-  letter-spacing:-.03em;
-  margin:0
-}
-
-.sectionhead p{
-  color:var(--muted);
-  max-width:580px;
-  margin:0
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px
-}
-
-.card{
-  background:var(--surface);
-  border:1px solid var(--line);
-  border-radius:16px;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
   padding:24px
 }
 
-.card .icon{
-  font-size:25px
+.construction-icon{
+  font-size:64px;
+  margin-bottom:20px
 }
 
-.card h3{
-  margin:14px 0 8px
+.construction h1{
+  font-size:clamp(42px,7vw,72px);
+  margin:14px 0
 }
 
-.card p{
+.construction p{
+  font-size:20px;
   color:var(--muted);
   margin:0
 }
 
-.stats{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:12px;
-  margin-top:24px
+.contact{
+  max-width:700px;
+  margin:0 auto;
+  padding:50px 24px;
+  text-align:center
 }
 
-.stat{
-  background:var(--surface2);
-  border-radius:14px;
-  padding:20px
+.contact h2{
+  margin-bottom:12px
 }
 
-.stat strong{
-  font-size:30px;
-  display:block
-}
-
-.stat span{
-  color:var(--muted);
-  font-size:13px
-}
-
-.projects{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:18px
-}
-
-.project{
-  padding:28px;
-  border-radius:18px;
-  border:1px solid var(--line);
-  background:linear-gradient(145deg,var(--surface),var(--surface2))
-}
-
-.tag{
-  display:inline-block;
-  font-size:12px;
-  border:1px solid var(--line);
-  border-radius:999px;
-  padding:4px 9px;
-  color:var(--muted);
-  margin-right:5px
-}
-
-.project h3{
-  font-size:22px
-}
-
-.project p{
+.contact p{
   color:var(--muted)
 }
 
-.join{
-  background:linear-gradient(135deg,#102d39,#17294d);
-  border-radius:24px;
-  padding:42px;
-  color:#fff
-}
-
-.join p{
-  color:#c5d5e3;
-  max-width:720px
-}
-
-.form{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin-top:20px
-}
-
-.form input,
-.form select{
-  width:100%;
-  padding:13px;
-  border-radius:9px;
-  border:1px solid #ffffff30;
-  background:#ffffff12;
-  color:#fff
-}
-
-.form button{
-  grid-column:1/-1;
-  padding:13px;
-  border:0;
-  border-radius:9px;
-  background:var(--accent);
-  font-weight:800;
-  cursor:pointer
-}
-
-.notice{
-  margin-top:12px;
-  color:#bce9e2;
-  font-size:13px;
-  display:none
+.contact a{
+  color:var(--accent);
+  font-weight:700
 }
 
 footer{
-  border-top:1px solid var(--line);
+  border-top:1px solid #dbe3ec;
   padding:28px 24px;
-  color:var(--muted)
-}
-
-.footin{
-  max-width:1120px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  gap:20px
-}
-
-@media(max-width:800px){
-
-  .hero{
-    grid-template-columns:1fr;
-    padding-top:55px
-  }
-
-  .orb{
-    height:260px
-  }
-
-  .grid,
-  .projects{
-    grid-template-columns:1fr
-  }
-
-  .stats{
-    grid-template-columns:1fr 1fr
-  }
-
-  .links{
-    display:none
-  }
-
-  .form{
-    grid-template-columns:1fr
-  }
-
-  .form button{
-    grid-column:auto
-  }
-
-  .footin{
-    flex-direction:column
-  }
-
+  color:var(--muted);
+  text-align:center
 }
 </style>
 </head>
@@ -379,346 +95,35 @@ footer{
 
 <div class="root">
 
-<nav>
-  <div class="navin">
-    <div class="brand">CAC <span>Mobile Neuro Lab</span></div>
+  <main class="construction">
 
-    <div class="links">
-      <a href="#mission">About</a>
-      <a href="#research">Research</a>
-      <a href="#students">Students</a>
-      <a href="#join">Opportunities</a>
+    <div>
+
+      <div class="construction-icon">
+        🚧
+      </div>
+
+      <div class="eyebrow">
+        Central Arizona College • Mobile Neuro Lab
+      </div>
+
+      <h1>
+        Website Under Construction
+      </h1>
+
+      <p>
+        The CAC Mobile Neuro Lab website will be available soon.
+      </p>
+
     </div>
-  </div>
-</nav>
 
-<header class="hero">
+  </main>
 
-  <div>
+
+  <section class="contact">
 
     <div class="eyebrow">
-      Central Arizona College • Psychology • Neuroscience • STEM
-    </div>
-
-    <h1>
-      Bringing neurotechnology into hands-on learning.
-    </h1>
-
-    <p>
-      The Central Arizona College Mobile Neuro Lab introduces students
-      to EEG, brain–computer interfaces, research methods, and emerging
-      neurotechnology through accessible, hands-on experiences.
-    </p>
-
-    <div class="buttons">
-      <a class="btn primary" href="#join">
-        Explore opportunities
-      </a>
-
-      <a class="btn" href="#research">
-        Explore research
-      </a>
-    </div>
-
-  </div>
-
-  <div class="orb">
-    <div class="orbtext">
-      EEG • BCI • Research • STEM
-    </div>
-  </div>
-
-</header>
-
-
-<section id="mission">
-
-  <div class="sectionhead">
-
-    <div>
-      <div class="eyebrow">
-        About the lab
-      </div>
-
-      <h2>
-        Accessible neurotechnology. Meaningful student experience.
-      </h2>
-    </div>
-
-    <p>
-      The Mobile Neuro Lab connects psychology and neuroscience with
-      practical technology, research training, and STEM workforce
-      development at Central Arizona College.
-    </p>
-
-  </div>
-
-
-  <div class="grid">
-
-    <article class="card">
-
-      <div class="icon">🧠</div>
-
-      <h3>
-        EEG & brain signals
-      </h3>
-
-      <p>
-        Build and work with EEG systems, learn how brain signals are
-        recorded, and develop foundational skills in neural data
-        collection.
-      </p>
-
-    </article>
-
-
-    <article class="card">
-
-      <div class="icon">💻</div>
-
-      <h3>
-        Neurotechnology
-      </h3>
-
-      <p>
-        Explore brain–computer interfaces, OpenBCI technology, data
-        workflows, and the rapidly growing field of neurotechnology.
-      </p>
-
-    </article>
-
-
-    <article class="card">
-
-      <div class="icon">🔬</div>
-
-      <h3>
-        Research training
-      </h3>
-
-      <p>
-        Develop skills in hypotheses, study design, measurement,
-        ethics, data collection, analysis, and scientific communication.
-      </p>
-
-    </article>
-
-  </div>
-
-
-  <div class="stats">
-
-    <div class="stat">
-      <strong>EEG</strong>
-      <span>Hands-on neural recording</span>
-    </div>
-
-    <div class="stat">
-      <strong>BCI</strong>
-      <span>Brain–computer interfaces</span>
-    </div>
-
-    <div class="stat">
-      <strong>STEM</strong>
-      <span>Workforce development</span>
-    </div>
-
-    <div class="stat">
-      <strong>Research</strong>
-      <span>Learning through inquiry</span>
-    </div>
-
-  </div>
-
-</section>
-
-
-<section id="research">
-
-  <div class="sectionhead">
-
-    <div>
-
-      <div class="eyebrow">
-        Research & learning
-      </div>
-
-      <h2>
-        From classroom questions to research experience.
-      </h2>
-
-    </div>
-
-    <p>
-      Potential lab activities can connect course concepts with
-      practical research experience. Specific projects, collaborators,
-      and outcomes can be added as the lab develops.
-    </p>
-
-  </div>
-
-
-  <div class="projects">
-
-    <article class="project">
-
-      <span class="tag">EEG</span>
-      <span class="tag">Attention</span>
-
-      <h3>
-        EEG & Cognitive Processes
-      </h3>
-
-      <p>
-        Use introductory EEG activities to examine neural signals
-        associated with attention, perception, memory, or other
-        cognitive processes.
-      </p>
-
-    </article>
-
-
-    <article class="project">
-
-      <span class="tag">BCI</span>
-      <span class="tag">Human Factors</span>
-
-      <h3>
-        Brain–Computer Interfaces
-      </h3>
-
-      <p>
-        Explore how brain signals can support computer interaction
-        while considering usability, accessibility, and responsible
-        research practices.
-      </p>
-
-    </article>
-
-
-    <article class="project">
-
-      <span class="tag">STEM</span>
-      <span class="tag">Education</span>
-
-      <h3>
-        Neurotechnology & Student Learning
-      </h3>
-
-      <p>
-        Investigate how hands-on neurotechnology experiences may
-        support student interest, confidence, and engagement with
-        STEM pathways.
-      </p>
-
-    </article>
-
-
-    <article class="project">
-
-      <span class="tag">Python</span>
-      <span class="tag">Data</span>
-
-      <h3>
-        Neural Data Skills
-      </h3>
-
-      <p>
-        Practice data organization, visualization, basic signal
-        processing, and communicating findings using accessible
-        computational tools.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<section id="students">
-
-  <div class="sectionhead">
-
-    <div>
-
-      <div class="eyebrow">
-        Student experience
-      </div>
-
-      <h2>
-        Build skills for research, transfer, and STEM careers.
-      </h2>
-
-    </div>
-
-    <p>
-      Students can connect psychology and neuroscience with technical,
-      research, teamwork, and communication skills that transfer
-      across academic and professional settings.
-    </p>
-
-  </div>
-
-
-  <div class="grid">
-
-    <article class="card">
-
-      <h3>
-        Technical skills
-      </h3>
-
-      <p>
-        EEG hardware, OpenBCI systems, data visualization,
-        introductory programming, troubleshooting, and experimental
-        technology.
-      </p>
-
-    </article>
-
-
-    <article class="card">
-
-      <h3>
-        Research skills
-      </h3>
-
-      <p>
-        Literature review, question development, study design,
-        measurement, data collection, ethical research, analysis,
-        and scientific reporting.
-      </p>
-
-    </article>
-
-
-    <article class="card">
-
-      <h3>
-        Professional skills
-      </h3>
-
-      <p>
-        Teamwork, documentation, presentations, problem solving,
-        scientific communication, and collaboration across
-        disciplines.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-<section id="join">
-
-  <div class="join">
-
-    <div class="eyebrow">
-      Student & research opportunities
+      Student & Research Opportunities
     </div>
 
     <h2>
@@ -726,91 +131,29 @@ footer{
     </h2>
 
     <p>
-      The lab can support hands-on learning, research experience,
-      technical skill development, and collaboration. Opportunities
-      and eligibility should be confirmed through Central Arizona
-      College.
+      Interested students, researchers, faculty, and community partners
+      can contact the Principal Investigator:
     </p>
 
+    <p>
+      <strong>
+        Gustavo Gonzalez-Cuevas, PhD
+      </strong>
+      <br>
 
-    <form
-      class="form"
-      onsubmit="event.preventDefault();document.querySelector('.notice').style.display='block'"
-    >
+      <a href="mailto:gustavo.gonzalezcuevas@centralaz.edu">
+        gustavo.gonzalezcuevas@centralaz.edu
+      </a>
+    </p>
 
-      <input
-        required
-        placeholder="Your name"
-      >
-
-      <input
-        required
-        type="email"
-        placeholder="Email address"
-      >
-
-      <select>
-
-        <option>
-          Student research
-        </option>
-
-        <option>
-          Lab volunteer
-        </option>
-
-        <option>
-          Course-related project
-        </option>
-
-        <option>
-          Faculty collaboration
-        </option>
-
-        <option>
-          Community partnership
-        </option>
-
-      </select>
+  </section>
 
 
-      <input
-        placeholder="Area of interest"
-      >
+  <footer>
 
+    © 2026 Central Arizona College Mobile Neuro Lab
 
-      <button type="submit">
-        Request information
-      </button>
-
-    </form>
-
-
-    <div class="notice">
-      Thanks! This demonstration form worked locally.
-      No information was submitted.
-    </div>
-
-  </div>
-
-</section>
-
-
-<footer>
-
-  <div class="footin">
-
-    <div>
-      © 2026 Central Arizona College Mobile Neuro Lab
-    </div>
-
-    <div>
-      Neuroscience • Neurotechnology • Student Research
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
 
 </div>
 
